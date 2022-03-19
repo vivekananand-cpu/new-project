@@ -16,23 +16,23 @@ const PostOption = ({optionModal,setOptionModal}) => {
                          </div>
 
                          <div  className="flex flex-col gap-3 p-2  h-full w-full">
-                            <div className="rounded-md flex items-center justify-center hover:bg-slate-300 cursor-pointer h-10 border text-center">
+                            <div className="rounded-md flex items-center justify-center hover:bg-pink-200 cursor-pointer h-10 border text-center">
                             <p >Unfollow</p>
                             
                             </div>
-                            <div className="rounded-md flex items-center justify-center hover:bg-slate-300 cursor-pointer h-10 border text-center">
+                            <div className="rounded-md flex items-center justify-center hover:bg-pink-200 cursor-pointer h-10 border text-center">
                             <p >Block</p>
                             
                             </div>
-                            <div className="rounded-md flex items-center justify-center hover:bg-slate-300 cursor-pointer h-10 border text-center">
+                            <div className="rounded-md flex items-center justify-center hover:bg-pink-200 cursor-pointer h-10 border text-center">
                             <p >Copy link</p>
                             
                             </div>
-                            <div className="rounded-md flex items-center justify-center hover:bg-slate-300 cursor-pointer h-10 border text-center">
+                            <div className="rounded-md flex items-center justify-center hover:bg-pink-200 cursor-pointer h-10 border text-center">
                             <p >Save Post</p>
                             
                             </div>
-                            <div className="rounded-md flex items-center justify-center hover:bg-slate-300 cursor-pointer h-10 border text-center">
+                            <div className="rounded-md flex items-center justify-center hover:bg-pink-200 cursor-pointer h-10 border text-center">
                             <p >Share Post</p>
                             
                             </div>

@@ -14,6 +14,7 @@ import Chat from "./components/Chat"
 
 import UserProflie from "./components/UserProflie";
 import People from './components/People';
+import EditProfile from './components/EditProfile';
 
 function App() {
   const [showModal,setShowModal]=useState(false);
@@ -35,6 +36,8 @@ function App() {
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/people" element={<People />} />
+        <Route path="/editprofle" element={<EditProfile />} />
+
 
 
 

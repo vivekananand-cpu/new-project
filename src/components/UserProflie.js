@@ -1,7 +1,7 @@
 import React from 'react'
 import { LocationMarkerIcon, PhoneIcon, MailIcon, HeartIcon, ChatIcon } from "@heroicons/react/outline";
 import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn'; 
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import BarChart from './BarChart';
@@ -9,14 +9,14 @@ import { useState } from 'react';
 import ImgModal from './ImgModal';
 import PostModal from './PostModal';
 import { PsychologyOutlined } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 // import EditProfileModal from './PostOption';
 
 const UserProflie = ({ name, profile, post, likes, comments, followers, work, phone, posts, following }) => {
     const [imgModal, setImgModal] = useState(false);
     const [postModal, setPostModal] = useState(false);
-    const [editProfileModal, setEditProfileModal] = useState(false);
 
-  
+
 
 
     return (
@@ -30,9 +30,11 @@ const UserProflie = ({ name, profile, post, likes, comments, followers, work, ph
                         <img onClick={() => { setImgModal(!imgModal) }} className="h-[250px] w-[250px] mt-3 pt-4 cursor-pointer shadow-md hover:shadow-xl rounded-full object-cover  hover:scale-110 transtion-all duration-500 ease-out" src={profile} alt="" />
                         <ImgModal photo={profile} imgModal={imgModal} setImgModal={setImgModal} />
                         <PostModal postModal={postModal} setPostModal={setPostModal} post={post} />
-                        <button onClick={() =>setEditProfileModal(!editProfileModal)} className="text-sm font-bold rounded-md hover:border border-black p-2 ">Edit Profile</button>
-                        {/* edit profile modal */}
-                        {/* <EditProfileModal  editProfiletModal={editProfileModal} setEditProfileModal={setEditProfileModal} /> */}
+                        <Link to="/editprofle">
+                            <button className="text-sm font-bold rounded-md hover:border border-black p-2 ">Edit Profile</button>
+                        </Link>
+
+
 
                         <h1 className="text-3xl pb-5 hover:text-gray-500 hover:scale-95 transiton-all duration-500 ease-out">{name}</h1>
                         {/* <button className="bg-white rounded-md p-2 hover:scale-105 transtion transform duration-500 ease-out active:scale-95 hover:shadow-xl">Edit Profile</button> */}

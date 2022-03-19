@@ -28,7 +28,7 @@ const SuggesionSeeAll = ({ seeAll, setSeeAll }) => {
                                 <p className="text-sm text-gray-400">{user.email}</p>
                             </div>
                             <div>
-                                <button className="font-bold text-blue-500 text-sm">Follow</button>
+                                <button className="font-bold text-pink-500 text-sm">Follow</button>
                             </div>
                         </div>
                                 )

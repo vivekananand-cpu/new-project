@@ -102,7 +102,7 @@ const Post = ({ username, img,caption }) => {
             <form className="flex items-center p-4" action="">
                 <EmojiHappyIcon className="h-7" />
                 <input placeholder="Add a comment..." className="border-none  flex-1 focus:ring-0 outline-none" type="text" />
-                <button type="submit" className="font-semibold text-blue-400">Post</button>
+                <button type="submit" className="font-semibold text-pink-500">Post</button>
             </form>
 
 
