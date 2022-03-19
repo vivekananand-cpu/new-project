@@ -2,7 +2,7 @@ import React from 'react'
 import Filters from './Filters'
 import Posts from './Posts'
 
-import Suggestions from './Suggestions'
+
 
 
 const MainPage = () => {
@@ -19,14 +19,9 @@ const MainPage = () => {
                     </div>
                 </div>
 
-                <div className=" rounded-lg col-span-2 ">
+                <div className="mt-[15%] rounded-lg col-span-2 ">
                     <div className=" flex flex-col items-center overflow-auto">
                         <Posts />
-
-
-
-
-
                     </div>
                 </div>
 

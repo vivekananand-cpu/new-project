@@ -8,8 +8,8 @@ const ImgModal = ({imgModal,setImgModal,photo}) => {
     if(!imgModal) return null;
     return ReactDOM.createPortal(
         <>
-        <div className="fixed top-0 bottom-0 right-0 left-0 z-0 bg-black/70"></div>
-            <div className="fixed  top-[10px] left-[20px] right-[20px] bottom-[10px] h[100vh] w-[100vw] flex items-center justify-center">
+        <div className="fixed top-0 bottom-0 right-0 left-0 z-[50] bg-black/70"></div>
+            <div className="fixed z-[60] top-[10px] left-[20px] right-[20px] bottom-[10px] h[100vh] w-[100vw] flex items-center justify-center">
                 <div className="rounded-xl h-[80vh] w-[40vw] bg-black/40 ">
                    <div className="flex justify-end">
                    <XIcon onClick={()=>setImgModal(!imgModal)} className="h-8 m-3 text-white hover:scale-110 cursor-pointer transtion-all duration-500 ease-out" />

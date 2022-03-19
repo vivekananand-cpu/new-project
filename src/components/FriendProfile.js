@@ -1,19 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ChatAltIcon, HeartIcon, ChatIcon, DotsHorizontalIcon, ChevronDownIcon, LocationMarkerIcon } from '@heroicons/react/outline';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import ImgModal from './ImgModal';
+
 
 const FriendProfile = () => {
+    const [imgModal,setImgModal]=useState(false);
+    const profile="https://pbs.twimg.com/profile_images/1426520543671382020/B_sjiJUZ_400x400.jpg"
+
     return (
         <>
         {/* this is a div */}
-            <div className="h-[100vh] w-[100vw] flex items-center justify-center">
+            <div className="h-[100vh] w-[100vw]  flex items-center justify-center">
                 <div className="w-[80vw] h-full   shadow-md ">
                     <div className="h-[35vh] bg-[#FFF2F2] w-full flex items-center border-[1px]">
                         <div className="w-[35%] h-full flex items-center justify-center p-3 ">
-                            <img className="h-[200px]  border-[1px] p-1 w-[200px] rounded-full hover:scale-105 transform transition duration-500 ease-out cursor-pointer " src="https://pbs.twimg.com/profile_images/1426520543671382020/B_sjiJUZ_400x400.jpg" alt="vijay"></img>
+                            <img onClick={()=>{setImgModal(!imgModal)}}  className="h-[200px]  border-[1px] p-1 w-[200px] rounded-full hover:scale-105 transform transition duration-500 ease-out cursor-pointer " src={profile} alt="vijay"></img>
+                            <ImgModal imgModal={imgModal} setImgModal={setImgModal} photo={profile} />
                         </div>
                         <div className="w-[65%] h-full  overflow-scroll ">
                             <div className="flex items-center justify-between  mt-4">

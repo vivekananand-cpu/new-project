@@ -3,10 +3,12 @@ import { DotsVerticalIcon, } from "@heroicons/react/solid";
 import { HeartIcon, ChatIcon, ShareIcon, BookmarkIcon, EmojiHappyIcon } from "@heroicons/react/outline";
 import { HeartIcon as HeartIconFilled }
     from "@heroicons/react/solid"
+import PostOption from './PostOption';
 
 const Post = ({ username, img,caption }) => {
     const [hasLiked, setHasLiked] = useState(false);
     const [mylikes, setMylikes] = useState(0);
+    const [optionModal,setOptionModal] = useState(false);
 
     const likePost = () => {
         if (hasLiked === false) {
@@ -24,19 +26,21 @@ const Post = ({ username, img,caption }) => {
 
         <div className="  rounded-lg shadow-lg container w-[500px] mx-auto mb-1 mt-1">
             {/* //top part  */}
-            <div className="container flex align-center justify-between bg-[#C2B1B1] rounded-lg shadow-lg">
+            <div className="container flex align-center justify-between   shadow-lg">
                 <div className="flex  align-center space-x-5">
                     <img src="https://imgk.timesnownews.com/media/15906943c06218cb9d67d1855bc6cc5e.jpg" className="mt-2 ml-2 h-10 rounded-full cursor-pointer object-contain" alt="profile-pic" />
                     <p className="font-bold pt-4 ">{username}</p>
                 </div>
-                <DotsVerticalIcon className="h-4 mt-4 mr-2 cursor-pointer" />
+                <DotsVerticalIcon onClick={()=>{setOptionModal(!optionModal)}} className="h-4 mt-4 mr-2 cursor-pointer" />
+                {/* this is a option modal */}
+                <PostOption optionModal={optionModal} setOptionModal={setOptionModal} />
 
 
             </div>
 
             {/* //middle part   */}
-            <div className="container  bg-red-500 rounded-lg">
-                <img className="w-full rounded-lg  object-cover" src={img} alt="" />
+            <div className="container ">
+                <img className="w-full  object-cover" src={img} alt="" />
 
             </div>
 

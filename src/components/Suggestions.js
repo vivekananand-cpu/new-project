@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import SuggesionSeeAll from './SuggesionSeeAll'
 
 const Suggestions = () => {
+    const [seeAll,setSeeAll]=useState(false);
     return (
-        <div>
+        <div className="z-[50]">
             <div className="flex-col items-center rounded-lg p-2 mt-[80px]  ">
                 <div className="container flex justify-between  p-2">
                     <h3 className="font-bold ">Suggestions for you</h3>
-                    <button>See all</button>
+                    <button onClick={()=>{setSeeAll(!seeAll);}} className="">See all</button>
+                    <SuggesionSeeAll setSeeAll={setSeeAll} seeAll={seeAll}  />
 
                 </div>
 

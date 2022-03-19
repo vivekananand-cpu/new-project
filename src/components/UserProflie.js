@@ -9,11 +9,14 @@ import { useState } from 'react';
 import ImgModal from './ImgModal';
 import PostModal from './PostModal';
 import { PsychologyOutlined } from '@mui/icons-material';
+// import EditProfileModal from './PostOption';
 
 const UserProflie = ({ name, profile, post, likes, comments, followers, work, phone, posts, following }) => {
     const [imgModal, setImgModal] = useState(false);
     const [postModal, setPostModal] = useState(false);
-    console.log(postModal)
+    const [editProfileModal, setEditProfileModal] = useState(false);
+
+  
 
 
     return (
@@ -27,8 +30,12 @@ const UserProflie = ({ name, profile, post, likes, comments, followers, work, ph
                         <img onClick={() => { setImgModal(!imgModal) }} className="h-[250px] w-[250px] mt-3 pt-4 cursor-pointer shadow-md hover:shadow-xl rounded-full object-cover  hover:scale-110 transtion-all duration-500 ease-out" src={profile} alt="" />
                         <ImgModal photo={profile} imgModal={imgModal} setImgModal={setImgModal} />
                         <PostModal postModal={postModal} setPostModal={setPostModal} post={post} />
+                        <button onClick={() =>setEditProfileModal(!editProfileModal)} className="text-sm font-bold rounded-md hover:border border-black p-2 ">Edit Profile</button>
+                        {/* edit profile modal */}
+                        {/* <EditProfileModal  editProfiletModal={editProfileModal} setEditProfileModal={setEditProfileModal} /> */}
 
                         <h1 className="text-3xl pb-5 hover:text-gray-500 hover:scale-95 transiton-all duration-500 ease-out">{name}</h1>
+                        {/* <button className="bg-white rounded-md p-2 hover:scale-105 transtion transform duration-500 ease-out active:scale-95 hover:shadow-xl">Edit Profile</button> */}
                     </div>
                     <div className="flex flex-col items-center justify-around">
                         <h1 className="font-bold text-5xl text-[#4C4267] hover:text-[#010001]">{work}</h1>
@@ -71,7 +78,7 @@ const UserProflie = ({ name, profile, post, likes, comments, followers, work, ph
 
                         </div>
                     </div>
-                    <div className="overflow-scroll bg-[#FFF8F8]">
+                    <div className="overflow-scroll z-0 bg-[#FFF8F8]">
                         <div className="grid grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 h-[695px] rounded-md">
                             <div onClick={() => setPostModal(!postModal)} className="relative m-2 hover:scale-105 hover:shadow-lg  cursor-pointer transform transition duration-300 ease-out">
                                 <img className=" w-full object-cover rounded-xl" src={post} alt="" />
