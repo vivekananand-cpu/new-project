@@ -19,7 +19,7 @@ const MainPage = () => {
                     </div>
                 </div>
 
-                <div className="mt-[15%] rounded-lg col-span-2 ">
+                <div className=" rounded-lg col-span-2 ">
                     <div className=" flex flex-col items-center overflow-auto">
                         <Posts />
                     </div>
