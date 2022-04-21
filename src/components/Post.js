@@ -5,7 +5,7 @@ import { HeartIcon as HeartIconFilled }
     from "@heroicons/react/solid"
 import PostOption from './PostOption';
 
-const Post = ({ username, img,caption }) => {
+const Post = ({ username, img,caption,avatar }) => {
     const [hasLiked, setHasLiked] = useState(false);
     const [mylikes, setMylikes] = useState(0);
     const [optionModal,setOptionModal] = useState(false);
@@ -28,7 +28,7 @@ const Post = ({ username, img,caption }) => {
             {/* //top part  */}
             <div className="container flex align-center justify-between   shadow-lg">
                 <div className="flex  align-center space-x-5">
-                    <img src="https://imgk.timesnownews.com/media/15906943c06218cb9d67d1855bc6cc5e.jpg" className="mt-2 ml-2 h-10 rounded-full cursor-pointer object-contain" alt="profile-pic" />
+                    <img src={avatar} className="mt-2 ml-2 h-10 rounded-full cursor-pointer object-contain" alt="profile-pic" />
                     <p className="font-bold pt-4 ">{username}</p>
                 </div>
                 <DotsVerticalIcon onClick={()=>{setOptionModal(!optionModal)}} className="h-4 mt-4 mr-2 cursor-pointer" />
