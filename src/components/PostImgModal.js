@@ -12,7 +12,7 @@ const PostImgModal = ({ openPostImg, setOpenPostImg }) => {
                     <div className="relative h-[70vh] w-[85vw] md:w-[60vw] lg:w-[40vw] bg-white rounded-lg ">
                         <div className="flex items-center justify-center mt-2">
                             <p className="font-bold text-2xl">Upload a new Post</p>
-                            <div onClick={() => { setOpenPostImg(!openPostImg) }} className=" absolute top-[-12px] right-[-10px] bg-violet-600 rounded-full cursor-pointer hover:scale-105  " >
+                            <div onClick={() => { setOpenPostImg(!openPostImg) }} className=" absolute top-[-12px] right-[-10px] bg-pink-600 rounded-full cursor-pointer hover:scale-105  " >
                                 <XIcon className="h-7 text-white " />
                             </div>
 
@@ -25,16 +25,16 @@ const PostImgModal = ({ openPostImg, setOpenPostImg }) => {
                                 <input id="files" type="file"  className="block w-full text-sm text-slate-500
                                        file:rounded-full file:border-0
                                        file:text-sm file:font-semibold
-                                       file:bg-violet-50 file:text-violet-700
-                                       hover:file:bg-violet-100
+                                       file:bg-pink-50 file:text-pink-700
+                                       hover:file:bg-pink-100
                                        file:mr-4 file:py-2 file:px-4
                                    "/>
                             </label>
                             <div className="flex gap-2">
-                            <b>Caption</b> <input type="text" className="w-[100%] border-2 border-violet-500 rounded-md"/>
+                            <b>Caption</b> <input type="text" className="w-[100%] border-2 border-pink-500 rounded-md"/>
 
                             </div>
-                            <button className="bg-violet-600 p-2 rounded-md w-[50%] mt-4 text-white hover:shadow-lg ">Upload</button>
+                            <button className="bg-pink-600 p-2 rounded-md w-[50%] mt-4 text-white hover:shadow-lg ">Upload</button>
                         </div>
                     </div>
                 </div>

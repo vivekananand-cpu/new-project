@@ -7,6 +7,7 @@ import JSONDATA from "./MOCK_DATA.json";
 const SuggesionSeeAll = ({ seeAll, setSeeAll }) => {
     if (!seeAll) return null;
     return ReactDOM.createPortal(
+        
         <>
             <div className="fixed flex items-center justify-center top-0 left-0 right-0 bottom-0 z-[60] bg-black/70">
                 <div className="h-[80vh] relative w-[30vw] bg-white rounded-md">

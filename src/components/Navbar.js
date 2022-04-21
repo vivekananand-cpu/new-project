@@ -13,19 +13,13 @@ import {
 
 
 } from "@heroicons/react/outline";
-import {
-    EmojiHappyIcon,
-    PencilAltIcon,
-    CogIcon,
-    SupportIcon,
-    LogoutIcon,
-    XCircleIcon
-} from "@heroicons/react/outline";
+
 
 
 import JSONDATA from "./MOCK_DATA.json";
 import PostImgModal from './PostImgModal';
 import { Link } from 'react-router-dom';
+import ProfileModal from './ProfileModal';
 
 
 
@@ -57,7 +51,7 @@ const Navbar = () => {
                     <div className="font-bold text-2xl cursor-pointer flex items-center text-gray-800">
                         <span className="flex">
                             <PlusCircleIcon className="h-8 top-6" />
-                            <p className="font-mono">Dhungya</p>
+                            <p className="font-mono">Website</p>
                         </span>
                         
                     </div>
@@ -162,50 +156,7 @@ const Navbar = () => {
                         </li>
                         {/* profile modal */}
 
-                        <div className="wrapper" >
-                            <div className={`${openProfile ? "md:inline" : "md:hidden"} inline  bg-pink-700 text-white rounded-lg  absolute top-[80px] right-1 p-3 flex flex-col space-y-3 transition-all duration-500 ease-out hover:scale-105 shadow-lg  `}>
-                                <div onClick={()=>{setOpenProfile(!openProfile)}} className="flex items-center align-center space-x-2 hover:text-gray-300 hover:scale-105 transition-all duration-500 ease-in-out ">
-                                    <EmojiHappyIcon className="h-5 text-yellow-300" />
-                                    <Link to="user">
-                                             My profile
-                                    </Link>
-
-                                </div>
-                               
-                                <div className="flex items-center align-center space-x-2 hover:text-gray-300 hover:scale-105 transition-all duration-500 ease-in-out">
-                                    <PencilAltIcon className="h-5 text-yellow-300" />
-
-                                    <a href="">Edit profile</a>
-
-                                </div>
-                                <div className="flex items-center align-center space-x-2 hover:text-gray-300 hover:scale-105 transition-all duration-500 ease-in-out">
-                                    <CogIcon className="h-5 text-yellow-300" />
-
-                                    <a href="">Settings</a>
-
-                                </div>
-                                <div className="flex items-center align-center space-x-2 hover:text-gray-300 hover:scale-105 transition-all duration-500 ease-in-out">
-                                    <SupportIcon className="h-5 text-yellow-300" />
-
-                                    <a href="">Help</a>
-
-                                </div>
-                                <div className="flex items-center align-center space-x-2 hover:text-gray-300 hover:scale-105 transition-all duration-500 ease-in-out">
-                                    <LogoutIcon className="h-5 text-yellow-300" />
-
-                                    <a href="">Logout</a>
-
-                                </div>
-                                <div className="hidden md:inline-flex w-full cursor-pointer  items-center justify-center">
-                                    <XCircleIcon onClick={() => setOpenProfile(!openProfile)} className="h-6 mt-4 hover:text-gray-300 hover:scale-105 transition-all duration-500 ease-in-out" />
-
-                                </div>
-
-
-                            </div>
-
-                        </div>
-
+                       <ProfileModal openProfile={openProfile}  setOpenProfile={setOpenProfile}/>
 
 
 

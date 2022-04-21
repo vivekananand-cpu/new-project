@@ -11,20 +11,14 @@ import MainPage from './components/MainPage';
 import Modal from './components/Modal';
 import Navbar from './components/Navbar';
 import Chat from "./components/Chat"
-
+import Login from "./components/Login"
 import UserProflie from "./components/UserProflie";
 import People from './components/People';
 import EditProfile from './components/EditProfile';
+import SignUp from './components/SignUp';
 
 function App() {
-  const [showModal,setShowModal]=useState(false);
-  const post1="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Samantha_at_10_Enradhukulla_Teaser_Launch.jpg/1200px-Samantha_at_10_Enradhukulla_Teaser_Launch.jpg"
-
-  const profile1="https://c.ndtvimg.com/2021-12/ebpsij18_samantha-ruth-prahu-naga-chaitanya_295x200_08_December_21.jpg"
-  const openModal=()=>{
-    setShowModal(!showModal);
-  }
-
+  
 
   return (
 
@@ -32,6 +26,10 @@ function App() {
     <Navbar />
       <Routes>
         <Route path="/" element={<MainPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+
+
         <Route path="/friend" element={<FriendProfile />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/chat" element={<Chat />} />
@@ -41,7 +39,7 @@ function App() {
 
 
 
-        <Route path="/user" element={<UserProflie name="Samantha Akhineni" profile={profile1} post={post1} posts="43" phone="8788677472" work="Civil Engineer" likes="433" comments="34" following="234" followers="439"  />
+        <Route path="/user" element={<UserProflie  />
 } />
 
 

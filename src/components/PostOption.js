@@ -10,8 +10,8 @@ const PostOption = ({optionModal,setOptionModal}) => {
             <div className="fixed flex items-center justify-center top-0 left-0 right-0 bottom-0 z-[50] bg-black/70 ">
                  <div className="fixed h-[100vh] w-[100vw]   flex items-center justify-center  ">
                      <div className="h-[50vh] w-[60vw] md:w-[40vw] lg:w-[20vw] bg-white rounded-md relative">
-                         <div onClick={()=>{setOptionModal(!optionModal)}} className="absolute right-[-15px] top-[-10px] cursor-pointer rounded-full bg-red-600">
-                         <XIcon className="h-6 text-white" />
+                         <div onClick={()=>{setOptionModal(!optionModal)}} className="absolute right-[-15px] top-[-10px] cursor-pointer rounded-full bg-pink-200">
+                         <XIcon className="h-6 "/>
 
                          </div>
 

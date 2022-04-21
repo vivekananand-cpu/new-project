@@ -5,16 +5,16 @@ import { HeartIcon, ChatIcon, ShareIcon, BookmarkIcon, EmojiHappyIcon } from "@h
 import { HeartIcon as HeartIconFilled }
     from "@heroicons/react/solid"
 
-const PostModal = ({ postModal, setPostModal, post }) => {
+const PostModal = ({ openModal, setOpenModal, post, comments, likes }) => {
 
-    if (!postModal) return null;
+    if (!openModal) return null;
     return ReactDOM.createPortal(
         <>
             <div className="fixed top-0 bottom-0 right-0 z-[50]  left-0 bg-black/70"></div>
             <div className="fixed z-[60]  top-[10px] left-[20px] right-[20px] bottom-[10px] h[100vh] w-[100vw] flex items-center justify-center">
                 <div className="rounded-xl h-[95vh] w-[60vw] bg-white ">
                     <div className="flex justify-end">
-                        <XIcon onClick={() => setPostModal(!postModal)} className="h-8 m-3  hover:scale-110 cursor-pointer transtion-all duration-500 ease-out" />
+                        <XIcon onClick={() => setOpenModal(!openModal)} className="h-8 m-3  hover:scale-110 cursor-pointer transtion-all duration-500 ease-out" />
                     </div>
                     <div className="flex ">
                         <div className="h-full w-[60%]  rounded-lg ">
@@ -32,13 +32,20 @@ const PostModal = ({ postModal, setPostModal, post }) => {
                                 </div>
                             </div>
                             <div className="h-[70vh] w-full p-3 ">
-                                <div className="flex  border-b-[1px] w-full  h-[80%]">
-                                    <div className="flex h-[60px]  items-center space-x-2" >
-                                        <img src="https://imgk.timesnownews.com/media/15906943c06218cb9d67d1855bc6cc5e.jpg" className="h-10  rounded-full cursor-pointer object-contain" alt="profile-pic" />
-                                        <p className="text-sm font-semibold">Vivek Thorat</p>
-                                        <p className="text-sm">looking Beautiful</p>
+                                <div className="flex flex-col  border-b-[1px] w-full  h-[80%]">
+                                    {
+                                        comments.map((comment) => (
+                                            <div className=" flex h-[60px]  items-center space-x-2" >
+                                                <img src="https://imgk.timesnownews.com/media/15906943c06218cb9d67d1855bc6cc5e.jpg" className="h-10  rounded-full cursor-pointer object-contain" alt="profile-pic" />
+                                                <div className="flex space-x-4">
+                                                    <p className="text-sm font-semibold">{comment.name}</p>
+                                                    <p className="text-sm">{comment.text}</p>
+                                                </div>
 
-                                    </div>
+                                            </div>
+                                        ))
+                                    }
+
 
                                 </div>
                                 <div className="h-[13%] flex flex-col p-t-2 border-b-[1px]">
@@ -61,7 +68,7 @@ const PostModal = ({ postModal, setPostModal, post }) => {
 
 
                                     </div>
-                                    <p className="font-bold ">345 likes</p>
+                                    <p className="font-bold ">{likes}</p>
                                 </div>
                                 <div className="h-[8%] ">
                                     <form className="flex items-center p-4" action="">
