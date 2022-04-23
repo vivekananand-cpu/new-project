@@ -15,7 +15,7 @@ const UserPost = ({ img, likes, comments, commentsCount }) => {
 
 
 <div onClick={() => setOpenModal(!openModal)} className="relative m-2 hover:scale-105 hover:shadow-lg  cursor-pointer transform transition duration-300 ease-out">
-                <img onClick={() => setOpenModal(!openModal)} className=" w-full object-cover rounded-xl" src={img} alt="" />
+                <img onClick={() => setOpenModal(!openModal)} className=" w-full h-full object-cover rounded-xl" src={img} alt="" />
 
                 <div className="flex items-center justify-center opacity-0 hover:opacity-100 absolute top-0 left-0 w-full h-full bg-black/50 rounded-xl">
                     <div className="flex space-x-6 text-white">

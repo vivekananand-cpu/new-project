@@ -1,46 +1,65 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+
 const SignUp = () => {
     return (
         <div className="h-[100vh] w-[100vw] flex mb-10  items-center  justify-center">
-            <div>
-                <div className="flex w-[95vw] md:w-[80vw] lg:w-[60vw] xl:w-[40vw]  justify-center container rounded-[20px] shadow-lg border container ">
-                    <div className="flex flex-col justify-around h-[100%] w-[80%] ">
-                        <div className="flex flex-col container  items-center gap-8 justify-between ">
-                            <h1 className="text-3xl mt-3">Create a new account</h1>
-                            <div className="w-full flex flex-col gap-2">
-
-                                <input className="pl-2 border-b-2 border-gray-500  outline-none focus:border-pink-400 focus:outline-none h-[30px] rounded-lg  w-[90%]" type="text" placeholder="Enter your Name " />
-
-
-                            </div>
-                            <div className="w-full">
-                                <input className="pl-2 border-b-2 border-gray-500  focus:border-pink-400  focus:outline-none h-[30px] rounded-lg w-[90%]" type="text" placeholder="Enter your phone number" />
-
-                            </div>
-                            <div className="w-full">
-                                <input className="pl-2 border-b-2 border-gray-500  focus:border-pink-400  focus:outline-none h-[30px] rounded-lg w-[90%]" type="email" placeholder="Enter your email address" />
-
-                            </div>
-                            <div className="w-full">
-                                <input className="pl-2 border-b-2 border-gray-500  focus:border-pink-400  focus:outline-none rounded-lg h-[30px] w-[90%]" type="password" placeholder="Enter your password" />
-
-                            </div>
-
-
+            <div className="h-[90%] bg-gray-50 rounded-lg shadow-lg xl:w-[40%] lg:w-[50%] md:w-[60%] w-[90%] ">
+                <div className=" flex h-full w-full">
+                    <div className=" w-full p-3 mt-6">
+                        <div className="font-bold text-3xl">
+                            <p>Hey,</p>
+                            <p>SignUp Now</p>
                         </div>
-                        <div className="flex items-center m-3 justify-around">
-                            <button class=" p-2 text-lg text-white rounded-lg bg-pink-500 hover:bg-pink-600 active:bg-pink-700 focus:outline-none focus:ring focus:ring-pink-300 ...">
-                                SignUp
-                            </button>
-                            <Link to="/login">
-                                <p className="hover:text-pink-600">already have an account?</p>
 
-                            </Link>
+
+                        <div className="flex mt-5 text-sm space-x-2">
+                            <p className="text-gray-500">Already have one ? / </p>
+                            <a className="text-pink-500" href="/login"> Login</a>
                         </div>
+
+                        <form action="">
+                            <div className="w-full flex flex-col space-y-2 mt-5">
+                                <div className="w-full">
+                                    <p className="font-bold">Name</p>
+                                    <input  className=" w-full h-[40px] text-gray-500 bg-gray-50 border-b-[2px] focus:outline-none" type="text" placeholder />
+                                </div>
+                                <div className="w-full">
+                                    <p className="font-bold">Email</p>
+                                    <input className=" w-full h-[40px] text-gray-500 bg-gray-50 border-b-[2px] focus:outline-none" type="email" placeholder />
+                                </div>
+                                <div className="w-full">
+                                    <p className="font-bold">Password</p>
+                                    <input className=" w-full h-[40px] text-gray-500 bg-gray-50 border-b-[2px] focus:outline-none" type="password" placeholder />
+                                </div>
+                                <div className="w-full">
+                                    <p className="font-bold">Mobile Number</p>
+                                    <input className=" w-full h-[40px] text-gray-500 bg-gray-50 border-b-[2px] focus:outline-none" type="number" placeholder />
+                                </div>
+                                <div className="w-full p-4">
+                                    <button className="bg-pink-500 text-white font-bold hover:shadow-md mt-4 transtion duration-200 ease-out hover:shadow-pink-700 rounded-xl p-3  w-full">SignUp</button>
+
+                                </div>
+                            </div>
+                        </form>
+
+                        <p className="text-sm w-full text-center font-bold">Or Signup with</p>
+                        <div className="w-full flex justify-center">
+                            <div className="w-[50%] mt-4 flex justify-between" >
+
+                                <img className="h-8 hover:scale-105 transtion transform duration-300 ease-out cursor-pointer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png" alt="" />
+                                <img className="h-8 hover:scale-105 transtion transform duration-300 ease-out cursor-pointer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/640px-Facebook_icon.svg.png" alt="" />
+                                <img className="h-8 hover:scale-105 transtion transform duration-300 ease-out cursor-pointer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/800px-Apple_logo_black.svg.png" alt="" />
+                            </div>
+                        </div>
+
+
+
                     </div>
                 </div>
+
+
             </div>
 
 
