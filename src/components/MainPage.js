@@ -1,6 +1,8 @@
 import React from 'react'
 import Filters from './Filters'
 import Posts from './Posts'
+import Navbar from '../components/Navbar'
+
 
 
 
@@ -9,6 +11,7 @@ const MainPage = () => {
 
     return (
         <>
+        <Navbar />
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2  xl:grid-cols-5 space-x-4    h-[700px] ">
                 <div className="hidden  lg:hidden md:hidden xl:inline">
                     <div className=" pl-4 flex flex-col  justify-evenly space-y-4">
